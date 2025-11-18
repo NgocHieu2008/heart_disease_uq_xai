@@ -43,7 +43,7 @@ def plot_advanced_metrics(y_true, y_probs, uncertainties, save_dir):
     # Sắp xếp theo độ không chắc chắn tăng dần (tự tin nhất -> kém tự tin nhất)
     sorted_indices = np.argsort(uncertainties)
     y_true_sorted = y_true[sorted_indices]
-    y_pred_label_sorted = (y_probs[sorted_indices] > 0.35).astype(int)
+    y_pred_label_sorted = (y_probs[sorted_indices] > 0.5).astype(int)
     
     fractions = np.linspace(0, 0.5, 20) # Loại bỏ từ 0% đến 50% dữ liệu xấu nhất
     accuracies = []
