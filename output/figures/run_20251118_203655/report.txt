@@ -1,0 +1,3 @@
+Accuracy: 0.7534
+AUC: 0.8305
+Uncertain threshold (Top 10%): 0.0657
